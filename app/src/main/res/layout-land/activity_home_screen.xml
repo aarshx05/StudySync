@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home_screen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.98"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/main_bg" />
+
+        <RelativeLayout
+            android:id="@+id/name_rel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_55sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:text="Hi,Aarsh"
+                android:textSize="@dimen/_25sdp" />
+
+
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_110sdp"
+            android:layout_below="@id/name_rel"
+            android:layout_marginTop="@dimen/_25sdp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_20sdp">
+
+                <ImageView
+
+                    android:id="@+id/imageView"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/home_card" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_toEndOf="@id/imageView"
+                    app:srcCompat="@drawable/profile_cardd" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_toEndOf="@id/imageView1"
+                    app:srcCompat="@drawable/home_card" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_toEndOf="@id/imageView2"
+                    app:srcCompat="@drawable/forum_card" />
+
+            </RelativeLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+
+</LinearLayout>

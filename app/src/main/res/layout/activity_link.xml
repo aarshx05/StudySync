@@ -1,0 +1,95 @@
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#0E0E0E"
+    app:itemIconTint="#F7F7F7"
+    app:itemTextColor="#F7F7F7">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/toolbar" />
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/papers_menu"
+        android:background="#111211"
+        app:itemIconTint="#F7F7F7"
+        app:itemTextColor="#F7F7F7"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.98"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/main_bg" />
+
+            <RelativeLayout
+                android:id="@+id/name_rel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <TextView
+                    android:id="@+id/header_tv"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:text="Papers"
+                    android:gravity="center"
+                    android:textSize="@dimen/_25sdp" />
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:alpha="0.9"
+                    android:scaleType="fitXY"
+                    android:layout_height="@dimen/_40sdp"
+                    app:srcCompat="@drawable/newemenu" />
+
+
+            </RelativeLayout>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@id/name_rel"
+                android:id="@+id/linksRecyclerView"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_5sdp"
+                android:clipToPadding="false"
+                android:scrollbars="vertical"
+                android:clickable="true"
+                android:focusable="true"
+
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "271418324835",
+    "project_id": "studysyncv1",
+    "storage_bucket": "studysyncv1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:271418324835:android:e00ddaf36ce49435810556",
+        "android_client_info": {
+          "package_name": "com.aarsh.app.studysyncv1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMl4qHzQpe7zqkJLO83LzP3KJ0sQZFJBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

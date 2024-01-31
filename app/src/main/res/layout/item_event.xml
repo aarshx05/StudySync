@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/item_event.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_2sdp">
+
+    <!-- TextView for displaying text -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:padding="@dimen/_5sdp">
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:cardCornerRadius="18dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/test" />
+            <View
+                android:alpha="0.6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000" />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/scrollView">
+            <TextView
+                android:id="@+id/textView"
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Default  Default"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#F4F4F4"
+                />
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+    <!-- ImageView for displaying images -->
+
+
+    </RelativeLayout>
+
+</LinearLayout>

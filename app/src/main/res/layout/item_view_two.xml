@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_80sdp"
+    android:layout_height="@dimen/_80sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/_18sdp"
+    android:layout_marginBottom="@dimen/_15sdp"
+    android:layout_marginLeft="@dimen/_5sdp"
+    android:layout_marginRight="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_15sdp"
+    app:cardBackgroundColor="#4E316F">
+
+
+    <RelativeLayout
+        android:id="@+id/card_view"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/year_card" />
+
+
+        <TextView
+            android:id="@+id/data_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingBottom="@dimen/_15sdp"
+            android:text="data name"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_13sdp"
+            />
+
+
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

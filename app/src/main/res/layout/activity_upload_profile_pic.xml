@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".UploadProfilePicActivity">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/main_bg"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/new_upper_bubble_cup" />
+
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/_leftbutton_shape"
+            android:fontFamily="@font/space_med"
+            android:paddingLeft="@dimen/_18sdp"
+            android:paddingRight="@dimen/_18sdp"
+            android:text="LogIn"
+            android:textColor="#F1F1F1"
+            android:textSize="@dimen/_10sdp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

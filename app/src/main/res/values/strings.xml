@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">StudySyncv1</string>
+    <string name="nav_draw_open">Open Nav Drawer</string>
+    <string name="nav_draw_close">Close Nav Drawer</string>
+</resources>

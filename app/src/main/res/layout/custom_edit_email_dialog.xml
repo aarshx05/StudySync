@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20sdp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_dialog_background">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingRight="@dimen/_20sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/pwd_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/space_med"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="Password"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_12sdp" />
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/base_rel1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/pwd_tv">
+                <ImageView
+                    android:id="@+id/name_reset_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_centerHorizontal="true"
+                    app:srcCompat="@drawable/new_input_shape" />
+                <EditText
+                    android:id="@+id/pwd_vl_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:fontFamily="@font/space_reg"
+                    android:hint="Authenticate Password"
+                    android:inputType="text"
+                    android:scaleType="centerCrop"
+                    android:backgroundTint="@android:color/transparent"
+                    android:textColor="#50FFFFFF"
+                    android:textColorHint="#20FFFFFF" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingRight="@dimen/_20sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/nemail_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/space_med"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="New Email"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_12sdp" />
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/base_rel3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/nemail_tv">
+                <ImageView
+                    android:id="@+id/name_reset_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_centerHorizontal="true"
+                    app:srcCompat="@drawable/new_input_shape" />
+                <EditText
+                    android:id="@+id/email_reset_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:fontFamily="@font/space_reg"
+                    android:hint="Enter Email"
+                    android:inputType="textEmailAddress"
+                    android:scaleType="centerCrop"
+                    android:backgroundTint="@android:color/transparent"
+                    android:textColor="#50FFFFFF"
+                    android:textColorHint="#20FFFFFF" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+        <Button
+            android:id="@+id/submit2_button"
+            android:layout_below="@id/base_rel"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/_leftbutton_shape"
+            android:fontFamily="@font/space_med"
+            android:text="Submit"
+            android:textColor="#F1F1F1"
+            android:textSize="@dimen/_8sdp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

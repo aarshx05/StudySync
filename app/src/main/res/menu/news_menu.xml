@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile"
+            android:title="Profile" />
+
+        <item
+            android:id="@+id/nav_question_paper"
+            android:icon="@drawable/papers"
+            android:title="Papers" />
+        <item
+            android:id="@+id/nav_resources"
+            android:icon="@drawable/booksicon"
+            android:title="Notes" />
+        <item
+            android:id="@+id/nav_forum"
+            android:icon="@drawable/forum"
+            android:title="Forum" />
+
+        <item
+            android:title="Contact Us"
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/contact_icon"/>
+    </group>
+
+
+
+
+
+</menu>

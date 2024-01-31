@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_15sdp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_dialog_background">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingRight="@dimen/_20sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp">
+
+            <EditText
+                android:id="@+id/editTextFileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/space_med"
+                android:hint="Enter File Name"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_15sdp" />
+
+
+
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingRight="@dimen/_20sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/buttonYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/buttonNo"
+                android:fontFamily="@font/space_med"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="Yes"
+                android:textColor="#DDDDDD"
+                android:textSize="@dimen/_14sdp" />
+            <TextView
+                android:id="@+id/buttonNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/space_med"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="No"
+                android:textColor="#DDDDDD"
+                android:textSize="@dimen/_14sdp" />
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
