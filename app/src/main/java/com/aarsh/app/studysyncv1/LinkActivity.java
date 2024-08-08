@@ -36,7 +36,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class LinkActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,LinkAdapter.OnNoteListener {
-    String catId, dId;
+    String catId, dId,refer;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
@@ -58,9 +58,9 @@ public class LinkActivity extends AppCompatActivity implements NavigationView.On
         Intent intent = getIntent();
         catId = intent.getStringExtra("categoryId");
         dId = intent.getStringExtra("dataId");
-
+        refer=intent.getStringExtra("refer");
         database = FirebaseDatabase.getInstance();
-        reference = database.getReference("Category").child(catId).child("data").child(dId).child("links");
+        reference = database.getReference(refer).child(catId).child("data").child(dId).child("links");
 
 
 

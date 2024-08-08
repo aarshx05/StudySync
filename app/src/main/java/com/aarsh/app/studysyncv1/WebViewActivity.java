@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -20,28 +19,32 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.github.barteksc.pdfviewer.PDFView;
 
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.lang.ref.WeakReference;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class WebViewActivity extends AppCompatActivity {
+
     private PDFView pdfView;
     private String pdfUrl;
 
     ImageView down;
-    ProgressBar progressBar;
+    static ProgressBar progressBar;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
         down = findViewById(R.id.button);
         pdfView = findViewById(R.id.pdfView);
-        progressBar=findViewById(R.id.progress);
+        progressBar = findViewById(R.id.progress);
         Intent intent = getIntent();
         if (intent != null) {
             pdfUrl = intent.getStringExtra("link");
@@ -55,7 +58,7 @@ public class WebViewActivity extends AppCompatActivity {
         });
 
         // Download and load PDF in the background
-        new DownloadPdfTask().execute(pdfUrl);
+        new DownloadPdfTask(pdfView).execute(pdfUrl);
     }
 
     private void showCustomAlertDialog() {
@@ -117,7 +120,14 @@ public class WebViewActivity extends AppCompatActivity {
         Toast.makeText(WebViewActivity.this, "Download started", Toast.LENGTH_SHORT).show();
     }
 
-    private class DownloadPdfTask extends AsyncTask<String, Void, File> {
+    private static class DownloadPdfTask extends AsyncTask<String, Void, File> {
+
+        private WeakReference<PDFView> pdfViewReference;
+
+        public DownloadPdfTask(PDFView pdfView) {
+            pdfViewReference = new WeakReference<>(pdfView);
+        }
+
         @Override
         protected File doInBackground(String... strings) {
             String pdfUrl = strings[0];
@@ -129,7 +139,7 @@ public class WebViewActivity extends AppCompatActivity {
                 InputStream inputStream = urlConnection.getInputStream();
                 BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream);
 
-                File outputFile = new File(getFilesDir(), "sample.pdf");
+                File outputFile = new File(pdfViewReference.get().getContext().getFilesDir(), "sample.pdf");
                 FileOutputStream fileOutputStream = new FileOutputStream(outputFile);
 
                 byte[] buffer = new byte[1024];
@@ -150,20 +160,19 @@ public class WebViewActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(File pdfFile) {
-            if (pdfFile != null) {
+            PDFView pdfView = pdfViewReference.get();
+            if (pdfFile != null && pdfView != null) {
                 // Load the downloaded PDF file into PDFView
-                progressBar.setVisibility(View.GONE);
                 pdfView.fromFile(pdfFile)
                         .defaultPage(0)
                         .enableSwipe(true)
                         .swipeHorizontal(false)
                         .enableDoubletap(true)
                         .load();
+                progressBar.setVisibility(View.GONE);
             } else {
                 // Handle the case where the PDF file download failed
-                Toast.makeText(WebViewActivity.this,"Check Network Connection",Toast.LENGTH_LONG).show();
-                progressBar.setVisibility(View.GONE);
-                finish();
+                Toast.makeText(pdfView.getContext(), "Check Network Connection", Toast.LENGTH_LONG).show();
             }
         }
     }

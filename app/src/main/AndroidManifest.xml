@@ -15,9 +15,13 @@
         android:theme="@style/Theme.App.Starting"
         tools:targetApi="31">
         <activity
-            android:name=".WebViewActivity"
+            android:name=".NotesScreen"
             android:exported="false"
             android:theme="@style/FullScreenTheme"/>
+        <activity
+            android:name=".WebViewActivity"
+            android:exported="false"
+            android:theme="@style/FullScreenTheme" />
         <activity
             android:name=".LinkActivity"
             android:exported="false"

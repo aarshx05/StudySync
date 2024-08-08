@@ -76,6 +76,14 @@ public class home_screen extends AppCompatActivity {
 
         getAndSetName();
 
+        notes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent notes_intent=new Intent(home_screen.this, NotesScreen.class);
+                startActivity(notes_intent);
+            }
+        });
+
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
